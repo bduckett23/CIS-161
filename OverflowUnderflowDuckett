@@ -1,0 +1,46 @@
+//============================================================================
+// Name        : OverflowUnderflowDuckett.cpp
+// Author      : Bryce Duckett
+// Version     :
+// Copyright   : Your copyright notice
+// Description : Overflow or underflow? in C++, Ansi-style
+//============================================================================
+
+
+#include <limits>
+#include <cstddef> 
+#include <iostream> 
+using namespace std;
+int main() {
+	float myVar = std::numeric_limits<float>::min();
+	//float myVar = -128;
+
+	cout << myVar << endl;
+	cout << myVar / 10000000000 << endl;
+
+
+	std::cin.ignore();
+	std::cin.get();
+
+	return 0;
+
+
+}
+/*
+Test Data
+	3.40282e+38
+	inf
+
+		The original program demonstrated overflow.  Overflow happens when the value of the number is too high for
+		the computer to represent it.
+
+		This currently program demostrates underflow.  Underflow happens when the value of the number is too small for 
+		the computer to represnt.
+
+New Test Data
+	1.17549e-38
+	0
+
+		In this program, I changed the max to min and divided that number by 10,000,000,000.
+*/
+
