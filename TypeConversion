@@ -1,0 +1,40 @@
+
+//============================================================================
+// Name        : TypeConversion.cpp
+// Author      : Bryce Duckett
+// Version     :
+// Copyright   : Your copyright notice
+// Description : casting in C++, Ansi-style
+//============================================================================
+
+#include <limits>
+#include <cstddef>
+#include <iostream>
+#include <iomanip>
+using namespace std;
+
+int main() {
+	float value;
+	double number = 16.23;
+
+	value = static_cast<float>(number);
+	cout << setprecision(2) << value << endl;
+
+	std::cin.get();
+
+	return 0;
+}
+
+
+/*
+Test Data:
+16
+If the setprecision(2) is removed, we get an answer of 16.23
+
+Comments:
+You might convert from a float to a double if you wanted a higher level of precision.  If you didn't need that precision, you
+might convert from a double to a float.  This would save space as a float is half the size of a double.
+
+
+
+*/
