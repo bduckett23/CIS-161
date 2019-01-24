@@ -1,0 +1,50 @@
+//============================================================================
+// Name        : IntArithmetic.cpp
+// Author      : Bryce Duckett
+// Version     :
+// Copyright   : Your copyright notice
+// Description : using cin, cout and arithmetic in C++, Ansi-style
+//============================================================================
+
+#include <iostream>
+using namespace std;
+
+int main() {
+	double a, b;
+	a = b = 0;
+
+	cout << "Enter a number: ";
+	cin >> a;
+
+	cout << "\nEnter a number: ";
+	cin >> b;
+
+	cout << "Addition:           " << (a + b) << endl;
+	cout << "Subtraction:        " << (a - b) << endl;
+	cout << "Multiplication:     " << (a * b) << endl;
+	cout << "Division:           " << (a / b) << endl;
+	//cout << "Modulo (remainder): " << (a % b) << endl;
+
+
+	std::cin.ignore();
+	std::cin.get();
+
+	return 0;
+}
+/*
+Test Data
+a = 4, b = 5
+Results
+Enter a number: 4
+
+Enter a number: 5
+Addition:           9
+Subtraction:        -1
+Multiplication      20
+Division			0.8
+Modulo (remainder): ERROR when trying to use double with modulo
+
+Learned: Doubles will work with everything outside of modulo. Ints will work with everything listed. 
+
+
+*/
